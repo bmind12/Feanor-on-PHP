@@ -7,12 +7,7 @@
         public static function updateAll()
         {
 
-            $host = 'mysql.hostinger.cz';
-            $name = 'u533740761_serge';
-            $user = 'u533740761_serge';
-            $password = '&ber2mU5F5wCaf=?R6';
-
-            $db = new PDO("mysql:host=$host; dbname=$name", $user, $password);
+            $db = Db::getConnection();
 
             $stmt = $db->prepare(INSERT);
             $stmt->execute();
@@ -26,12 +21,7 @@
         public static function updateCategory($category)
         {
 
-            $host = 'mysql.hostinger.cz';
-            $name = 'u533740761_serge';
-            $user = 'u533740761_serge';
-            $password = '&ber2mU5F5wCaf=?R6';
-
-            $db = new PDO("mysql:host=$host; dbname=$name", $user, $password);
+            $db = Db::getConnection();
 
             echo '<br>this is updateCategory';
 
@@ -42,37 +32,50 @@
         public static function updateType($type, $category)
         {
 
-            $host = 'mysql.hostinger.cz';
-            $name = 'u533740761_serge';
-            $user = 'u533740761_serge';
-            $password = '&ber2mU5F5wCaf=?R6';
+            $db = Db::getConnection();
 
-            // echo $category;
-            // echo $type;
-
-            $db = new PDO("mysql:host=$host; dbname=$name", $user, $password);
-
+            // Do update only if dir exists
             $dirName = ROOT . '/public/img/' . $type . '/' . $category;
 
-            echo '<br><br>' . $dirName;
-            echo '<br><br>';
-
-            $dir = new DirectoryIterator(dirname());
-
-            foreach ($dir as $fileinfo)
+            if (is_dir($dirName))
             {
-                if (!$fileinfo->isDot()) {
-                    var_dump($fileinfo->getFilename());
+
+                $dirName = $dirName . '/*';
+
+                $dir = new DirectoryIterator(dirname($dirName));
+
+                // Delete current items
+                $stmtDel = $db->prepare("DELETE FROM items "
+                         . "WHERE category = :category AND type = :type;");
+                $stmtDel->bindParam(':type', $type);
+                $stmtDel->bindParam(':category', $category);
+                $stmtDel->execute();
+
+                // Add new items
+                foreach ($dir as $fileinfo)
+                {
+                    if (!$fileinfo->isDot()) {
+                        $fileName = $fileinfo->getFilename();
+                        $path = sprintf('/public/img/%s/%s/', $type, $category);
+
+                        $stmtAdd = $db->prepare("INSERT INTO items "
+                              . "(name, path, category, type) "
+                              . "VALUES (:name, :path, :category, :type);");
+                        $stmtAdd->bindParam(':category', $category);
+                        $stmtAdd->bindParam(':type', $type);
+                        $stmtAdd->bindParam(':name', $fileName);
+                        $stmtAdd->bindParam(':path', $path);
+                        $stmtAdd->execute();
+                    }
                 }
+
+                return true;
             }
-
-            // $stmt = $db->prepare(INSERT);
-            // $stmt->execute();
-
-            return true;
-
+            else
+            {
+                echo 'This directory does not exists.';
+                return false;
+            }
         }
-
     }
-
 ?>
