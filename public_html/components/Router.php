@@ -45,9 +45,9 @@
                     $type = array_shift($segments);
                     $category = array_shift($segments);
 
-                    echo 'action: ' . $actionName;
-                    echo '<br><br>';
-                    echo 'controller: ' . $controllerName;
+                    // echo 'action: ' . $actionName;
+                    // echo '<br><br>';
+                    // echo 'controller: ' . $controllerName;
 
                     // Running controller class file
                     $controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
@@ -56,7 +56,7 @@
                         include_once($controllerFile);
 
                     $controllerObject = new $controllerName;
-                    $result = $controllerObject->$actionName($category, $type);
+                    $result = $controllerObject->$actionName($type, $category);
 
                     if ($result != NULL)
                         break;

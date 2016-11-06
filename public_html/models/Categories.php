@@ -4,7 +4,7 @@
     class Categories
     {
 
-        public static function displayCategories()
+        public static function displayCategories($type)
         {
 
             $host = 'mysql.hostinger.cz';
@@ -16,11 +16,18 @@
 
             $categories = array();
 
-            $result = $db->query("SELECT * FROM categories c ORDER BY c.order ASC");
+            $stmt = $db->prepare("SELECT c.description "
+                  . "FROM categories c "
+                  . "WHERE c.type = ? "
+                  . "ORDER BY c.order ASC;");
+
+            $stmt->bindParam(1, $type, PDO::PARAM_STR);
+
+            $stmt->execute();
 
             $i = 0;
 
-            while ($row = $result->fetch())
+            while ($row = $stmt->fetch())
             {
                 $categories[$i++] = $row['description'];
             }
