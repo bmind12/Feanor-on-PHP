@@ -7,17 +7,17 @@
     {
         public function actionDisplay($type, $category)
         {
-            
-            $photosList = array();
-            $photosList = Categories::displayCategories($type);
-            
-            $photosList = array();
-            $photosList = Items::displayItems($type, $category);
-            
+
+            $categoriesList = array();
+            $categoriesList = Categories::displayCategories($type);
+
+            // $itemsList = array();
+            // $itemsList = Items::displayItems($type, $category);
+
             echo '<pre>';
-            print_r($photosList);
+            print_r($categoriesList);
             echo '</pre>';
-            
+
             return true;
         }
     }

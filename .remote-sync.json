@@ -1,0 +1,16 @@
+{
+  "transport": "ftp",
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "31.170.164.107",
+  "port": "21",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "u533740761",
+  "password": "$IGL;inTg4cMpa~PGq",
+  "watch": [],
+  "target": "/public_html/"
+}

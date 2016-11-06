@@ -1,0 +1,189 @@
+[06-Nov-2016 07:35:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'10.2.1.4' (using password: NO) in /home/u533740761/public_html/models/Categories.php:15
+Stack trace:
+#0 /home/u533740761/public_html/models/Categories.php(15): PDO->__construct('mysql:host = my...')
+#1 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#2 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#3 /home/u533740761/public_html/index.php(12): Router->run()
+#4 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 15
+[06-Nov-2016 07:36:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'10.2.1.4' (using password: NO) in /home/u533740761/public_html/models/Categories.php:15
+Stack trace:
+#0 /home/u533740761/public_html/models/Categories.php(15): PDO->__construct('mysql:host = my...')
+#1 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#2 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'car')
+#3 /home/u533740761/public_html/index.php(12): Router->run()
+#4 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 15
+[06-Nov-2016 07:36:35 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'10.2.1.4' (using password: NO) in /home/u533740761/public_html/models/Categories.php:15
+Stack trace:
+#0 /home/u533740761/public_html/models/Categories.php(15): PDO->__construct('mysql:host = my...')
+#1 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#2 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#3 /home/u533740761/public_html/index.php(12): Router->run()
+#4 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 15
+[06-Nov-2016 07:43:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'10.2.1.4' (using password: NO) in /home/u533740761/public_html/models/Categories.php:15
+Stack trace:
+#0 /home/u533740761/public_html/models/Categories.php(15): PDO->__construct('mysql:host = my...')
+#1 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#2 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#3 /home/u533740761/public_html/index.php(12): Router->run()
+#4 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 15
+[06-Nov-2016 07:43:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'10.2.1.4' (using password: NO) in /home/u533740761/public_html/models/Categories.php:15
+Stack trace:
+#0 /home/u533740761/public_html/models/Categories.php(15): PDO->__construct('mysql:host = my...')
+#1 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#2 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#3 /home/u533740761/public_html/index.php(12): Router->run()
+#4 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 15
+[06-Nov-2016 07:43:48 UTC] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ')' in /home/u533740761/public_html/models/Categories.php on line 16
+[06-Nov-2016 07:44:30 UTC] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ')' in /home/u533740761/public_html/models/Categories.php on line 15
+[06-Nov-2016 07:44:31 UTC] PHP Parse error:  syntax error, unexpected '"', expecting ',' or ')' in /home/u533740761/public_html/models/Categories.php on line 15
+[06-Nov-2016 07:44:53 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php:25
+Stack trace:
+#0 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#1 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#2 /home/u533740761/public_html/index.php(12): Router->run()
+#3 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 25
+[06-Nov-2016 07:45:14 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php:25
+Stack trace:
+#0 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#1 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#2 /home/u533740761/public_html/index.php(12): Router->run()
+#3 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 25
+[06-Nov-2016 09:02:12 UTC] PHP Fatal error:  Uncaught Error: Class 'ImagesController' not found in /home/u533740761/public_html/components/Router.php:54
+Stack trace:
+#0 /home/u533740761/public_html/index.php(12): Router->run()
+#1 {main}
+  thrown in /home/u533740761/public_html/components/Router.php on line 54
+[06-Nov-2016 09:04:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php:23
+Stack trace:
+#0 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#1 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#2 /home/u533740761/public_html/index.php(12): Router->run()
+#3 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 23
+[06-Nov-2016 09:04:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php:23
+Stack trace:
+#0 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#1 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#2 /home/u533740761/public_html/index.php(12): Router->run()
+#3 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 23
+[06-Nov-2016 09:11:42 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php:23
+Stack trace:
+#0 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#1 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#2 /home/u533740761/public_html/index.php(12): Router->run()
+#3 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 23
+[06-Nov-2016 09:11:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php:23
+Stack trace:
+#0 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#1 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#2 /home/u533740761/public_html/index.php(12): Router->run()
+#3 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 23
+[06-Nov-2016 09:14:11 UTC] PHP Fatal error:  Uncaught Error: Class 'Categories' not found in /home/u533740761/public_html/controllers/PortfolioController.php:12
+Stack trace:
+#0 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#1 /home/u533740761/public_html/index.php(12): Router->run()
+#2 {main}
+  thrown in /home/u533740761/public_html/controllers/PortfolioController.php on line 12
+[06-Nov-2016 09:14:15 UTC] PHP Fatal error:  Uncaught Error: Class 'Categories' not found in /home/u533740761/public_html/controllers/PortfolioController.php:12
+Stack trace:
+#0 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#1 /home/u533740761/public_html/index.php(12): Router->run()
+#2 {main}
+  thrown in /home/u533740761/public_html/controllers/PortfolioController.php on line 12
+[06-Nov-2016 09:14:17 UTC] PHP Fatal error:  Uncaught Error: Class 'Categories' not found in /home/u533740761/public_html/controllers/PortfolioController.php:12
+Stack trace:
+#0 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#1 /home/u533740761/public_html/index.php(12): Router->run()
+#2 {main}
+  thrown in /home/u533740761/public_html/controllers/PortfolioController.php on line 12
+[06-Nov-2016 09:14:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Categories' not found in /home/u533740761/public_html/controllers/PortfolioController.php:12
+Stack trace:
+#0 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#1 /home/u533740761/public_html/index.php(12): Router->run()
+#2 {main}
+  thrown in /home/u533740761/public_html/controllers/PortfolioController.php on line 12
+[06-Nov-2016 09:18:39 UTC] PHP Fatal error:  Uncaught Error: Class 'Categories' not found in /home/u533740761/public_html/controllers/PortfolioController.php:12
+Stack trace:
+#0 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#1 /home/u533740761/public_html/index.php(12): Router->run()
+#2 {main}
+  thrown in /home/u533740761/public_html/controllers/PortfolioController.php on line 12
+[06-Nov-2016 09:18:58 UTC] PHP Fatal error:  Uncaught Error: Class 'Categories' not found in /home/u533740761/public_html/controllers/PortfolioController.php:12
+Stack trace:
+#0 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#1 /home/u533740761/public_html/index.php(12): Router->run()
+#2 {main}
+  thrown in /home/u533740761/public_html/controllers/PortfolioController.php on line 12
+[06-Nov-2016 09:19:10 UTC] PHP Fatal error:  Uncaught Error: Class 'Categories' not found in /home/u533740761/public_html/controllers/PortfolioController.php:12
+Stack trace:
+#0 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#1 /home/u533740761/public_html/index.php(12): Router->run()
+#2 {main}
+  thrown in /home/u533740761/public_html/controllers/PortfolioController.php on line 12
+[06-Nov-2016 09:19:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php:28
+Stack trace:
+#0 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#1 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#2 /home/u533740761/public_html/index.php(12): Router->run()
+#3 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 28
+[06-Nov-2016 09:22:07 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php:28
+Stack trace:
+#0 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#1 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#2 /home/u533740761/public_html/index.php(12): Router->run()
+#3 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 28
+[06-Nov-2016 09:23:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php:28
+Stack trace:
+#0 /home/u533740761/public_html/controllers/PortfolioController.php(12): Categories::displayCategories('photos')
+#1 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#2 /home/u533740761/public_html/index.php(12): Router->run()
+#3 {main}
+  thrown in /home/u533740761/public_html/models/Categories.php on line 28
+[06-Nov-2016 09:34:42 UTC] PHP Fatal error:  Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php on line 28
+[06-Nov-2016 09:34:51 UTC] PHP Fatal error:  Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php on line 28
+[06-Nov-2016 09:40:30 UTC] PHP Fatal error:  Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php on line 28
+[06-Nov-2016 10:08:37 UTC] PHP Fatal error:  Call to a member function fetch() on boolean in /home/u533740761/public_html/models/Categories.php on line 28
+[06-Nov-2016 10:08:51 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'10.2.1.4' (using password: NO)' in /home/u533740761/public_html/models/Items.php:15
+Stack trace:
+#0 /home/u533740761/public_html/models/Items.php(15): PDO->__construct('mysql:host = lo...')
+#1 /home/u533740761/public_html/controllers/PortfolioController.php(15): Items::displayItems('photos', 'portraits')
+#2 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#3 /home/u533740761/public_html/index.php(12): Router->run()
+#4 {main}
+  thrown in /home/u533740761/public_html/models/Items.php on line 15
+[06-Nov-2016 10:09:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'10.2.1.4' (using password: NO)' in /home/u533740761/public_html/models/Items.php:15
+Stack trace:
+#0 /home/u533740761/public_html/models/Items.php(15): PDO->__construct('mysql:host = lo...')
+#1 /home/u533740761/public_html/controllers/PortfolioController.php(15): Items::displayItems('photos', 'portraits')
+#2 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#3 /home/u533740761/public_html/index.php(12): Router->run()
+#4 {main}
+  thrown in /home/u533740761/public_html/models/Items.php on line 15
+[06-Nov-2016 10:09:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'10.2.1.4' (using password: NO)' in /home/u533740761/public_html/models/Items.php:15
+Stack trace:
+#0 /home/u533740761/public_html/models/Items.php(15): PDO->__construct('mysql:host = lo...')
+#1 /home/u533740761/public_html/controllers/PortfolioController.php(15): Items::displayItems('photos', 'portraits')
+#2 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#3 /home/u533740761/public_html/index.php(12): Router->run()
+#4 {main}
+  thrown in /home/u533740761/public_html/models/Items.php on line 15
+[06-Nov-2016 10:10:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'10.2.1.4' (using password: NO)' in /home/u533740761/public_html/models/Items.php:15
+Stack trace:
+#0 /home/u533740761/public_html/models/Items.php(15): PDO->__construct('mysql:host = lo...')
+#1 /home/u533740761/public_html/controllers/PortfolioController.php(15): Items::displayItems('photos', 'portraits')
+#2 /home/u533740761/public_html/components/Router.php(55): PortfolioController->actionDisplay('photos', 'portraits')
+#3 /home/u533740761/public_html/index.php(12): Router->run()
+#4 {main}
+  thrown in /home/u533740761/public_html/models/Items.php on line 15
