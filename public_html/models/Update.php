@@ -47,25 +47,34 @@
                 // Delete current items
                 $stmtDel = $db->prepare("DELETE FROM items "
                          . "WHERE category = :category AND type = :type;");
-                $stmtDel->bindParam(':type', $type);
-                $stmtDel->bindParam(':category', $category);
-                $stmtDel->execute();
+                $stmtDel->execute(array(
+                    ':category' => $category,
+                    ':type' => $type
+                ));
 
                 // Add new items
                 foreach ($dir as $fileinfo)
                 {
                     if (!$fileinfo->isDot()) {
-                        $fileName = $fileinfo->getFilename();
+
+                        // Converting file name (adding leading zeroes)
+                        $fName = $fileinfo->getFilename();
+                        $fInt = intval($fName);
+                        $fIntFrmt = sprintf('%04d', intval($fName));
+                        $fName = str_replace($fInt, $fIntFrmt, $fName);
+
                         $path = sprintf('/public/img/%s/%s/', $type, $category);
 
+                        // Preparing and executing query filled with variables
                         $stmtAdd = $db->prepare("INSERT INTO items "
                               . "(name, path, category, type) "
                               . "VALUES (:name, :path, :category, :type);");
-                        $stmtAdd->bindParam(':category', $category);
-                        $stmtAdd->bindParam(':type', $type);
-                        $stmtAdd->bindParam(':name', $fileName);
-                        $stmtAdd->bindParam(':path', $path);
-                        $stmtAdd->execute();
+                        $stmtAdd->execute(array(
+                            ':category' => $category,
+                            ':type' => $type,
+                            ':name' => $fName,
+                            ':path' => $path
+                        ));
                     }
                 }
 
