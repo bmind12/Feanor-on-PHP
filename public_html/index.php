@@ -1,8 +1,5 @@
 <?php
 
-    echo 'this is index.php';
-    echo '<br><br><br>';
-
     //Turning on/off error checking
     ini_set('display_errors',1);
     error_reporting(E_ALL);

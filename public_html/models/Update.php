@@ -23,7 +23,10 @@
 
             $db = Db::getConnection();
 
-            echo '<br>this is updateCategory';
+            $stmt = $db->prepare(INSERT);
+            $stmt->execute();
+
+            echo '<br>this is updateAll';
 
             return true;
 
@@ -34,7 +37,7 @@
 
             $db = Db::getConnection();
 
-            // Do update only if dir exists
+            // Update only if dir exists
             $dirName = ROOT . '/public/img/' . $type . '/' . $category;
 
             if (is_dir($dirName))
@@ -44,13 +47,8 @@
 
                 $dir = new DirectoryIterator(dirname($dirName));
 
-                // Delete current items
-                $stmtDel = $db->prepare("DELETE FROM items "
-                         . "WHERE category = :category AND type = :type;");
-                $stmtDel->execute(array(
-                    ':category' => $category,
-                    ':type' => $type
-                ));
+                // Delete current items for specified category and type
+                Update::deleteRecords($type, $category, $db);
 
                 // Add new items
                 foreach ($dir as $fileinfo)
@@ -85,6 +83,21 @@
                 echo 'This directory does not exists.';
                 return false;
             }
+        }
+
+        private static function deleteRecords($type, $category, $db)
+        {
+
+            // Delete current items
+            $stmtDel = $db->prepare("DELETE FROM items "
+                     . "WHERE category = :category AND type = :type;");
+            $stmtDel->execute(array(
+                ':category' => $category,
+                ':type' => $type
+            ));
+
+            return true;
+
         }
     }
 ?>

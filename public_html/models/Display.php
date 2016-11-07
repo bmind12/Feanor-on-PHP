@@ -1,8 +1,30 @@
 <?php
 
 
-    class Items
+    class Display
     {
+        public static function displayCategories($type)
+        {
+
+            $db = Db::getConnection();
+
+            $categories = array();
+
+            $stmt = $db->prepare("SELECT c.description "
+                  . "FROM categories c "
+                  . "WHERE c.type = :type "
+                  . "ORDER BY c.order ASC;");
+
+            $stmt->execute(array(':type' => $type));
+
+            $i = 0;
+
+            while ($row = $stmt->fetch())
+                $categories[$i++] = $row['description'];
+
+            return $categories;
+
+        }
 
         public static function displayItems($type, $category)
         {
