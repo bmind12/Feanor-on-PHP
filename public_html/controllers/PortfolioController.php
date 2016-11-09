@@ -8,19 +8,24 @@
         public function actionDisplay($type, $category)
         {
 
+              $menusList = array();
+              $menusList = Display::getMenus();
+
               $categoriesList = array();
-              $categoriesList = Display::displayCategories($type);
+              $categoriesList = Display::getCategories($type, $category);
 
               $itemsList = array();
-              $itemsList = Display::displayItems($type, $category);
+              $itemsList = Display::getItems($type, $category);
 
-              echo '<pre>';
-              print_r($categoriesList);
-              echo '</pre>';
+              // echo '<pre>';
+              // print_r($categoriesList);
+              // echo '</pre>';
 
-              echo '<pre>';
-              print_r($itemsList);
-              echo '</pre>';
+              // echo '<pre>';
+              // print_r($itemsList);
+              // echo '</pre>';
+
+              require_once(ROOT . '/views/portfolio/index.php');
 
               return true;
         }

@@ -2,7 +2,8 @@
 
     return array(
 
-        'main' => 'main/index',
+        'main' => 'main/display/index',
+        // 'contact' => 'contact/display',
 
         'portfolio/update/([a-z]+)/([a-z]+)' => 'portfolio/update/$1/$2',
         'portfolio/update/([a-z]+)' => 'portfolio/update/$1',

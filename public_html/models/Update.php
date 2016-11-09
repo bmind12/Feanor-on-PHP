@@ -1,6 +1,5 @@
 <?php
 
-
     class Update
     {
 
@@ -57,22 +56,30 @@
 
                         // Converting file name (adding leading zeroes)
                         $fName = $fileinfo->getFilename();
-                        $fInt = intval($fName);
-                        $fIntFrmt = sprintf('%04d', intval($fName));
-                        $fName = str_replace($fInt, $fIntFrmt, $fName);
+                        $order = intval($fName);
+                        $display = intval(!strpos($fName, 't'));
+                        $crop = Update::cropType($fName);
 
-                        $path = sprintf('/public/img/%s/%s/', $type, $category);
+                        $path = sprintf('/public/img/%s/%s/'
+                              . $fName, $type, $category);
 
                         // Preparing and executing query filled with variables
                         $stmtAdd = $db->prepare("INSERT INTO items "
-                              . "(name, path, category, type) "
-                              . "VALUES (:name, :path, :category, :type);");
+                                 . "(name, path, category, type, "
+                                 . "crop, display_order, display) "
+                                 . "VALUES (:name, :path, :category, "
+                                 . ":type, :crop, :order, :display);");
+
                         $stmtAdd->execute(array(
+                            ':name' => $fName,
+                            ':path' => $path,
                             ':category' => $category,
                             ':type' => $type,
-                            ':name' => $fName,
-                            ':path' => $path
+                            ':crop' => $crop,
+                            ':order' => $order,
+                            ':display' => $display,
                         ));
+
                     }
                 }
 
@@ -87,7 +94,6 @@
 
         private static function deleteRecords($type, $category, $db)
         {
-
             // Delete current items
             $stmtDel = $db->prepare("DELETE FROM items "
                      . "WHERE category = :category AND type = :type;");
@@ -97,7 +103,16 @@
             ));
 
             return true;
+        }
 
+        private static function cropType($fName)
+        {
+            if (strpos($fName, '_p_'))
+                return 'portrait';
+            elseif (strpos($fName, '_pt_'))
+                return 'portrait-top';
+            else
+                return 'landscape';
         }
     }
 ?>

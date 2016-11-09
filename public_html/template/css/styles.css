@@ -1,0 +1,645 @@
+/*CONTACTS*/
+
+.Contacts {
+    position: relative;
+    width: 600px;
+    height: auto;
+    margin: 0 auto 30px auto;
+    background-color: #e7e7e7;
+    font-family: "Segoe UI", "Arial", "Courier New";
+}
+
+#contacts-yul {
+    position: relative;
+    float: left;
+}
+
+#contacts-ser {
+    position: relative;
+    float: right;
+}
+
+.contacts p {
+}
+
+.contacts a:hover {
+    color: #6ba5cb;
+}
+
+.fa {
+    color: #adadad;
+}
+
+.fa:hover {
+    color: #3c3c3c;
+}
+
+/*CROSSFADE*/
+
+#crossfade > img {
+    margin: 0 auto;
+    list-style-type: none;
+    position: absolute;
+    height: 100%;
+    color: transparent;
+    opacity: 0;
+    z-index: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 30s linear infinite 0s;
+    -moz-animation: imageAnimation 30s linear infinite 0s;
+    -o-animation: imageAnimation 30s linear infinite 0s;
+    -ms-animation: imageAnimation 30s linear infinite 0s;
+    animation: imageAnimation 30s linear infinite 0s;
+}
+#crossfade > img:nth-child(2)  {
+    background-image: url(/images/main/2.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    animation-delay: 6s;
+    -ms-animation-delay: 6s;
+}
+#crossfade > img:nth-child(3) {
+    background-image: url(/images/main/3.jpg);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    animation-delay: 12s;
+    -ms-animation-delay: 12s;
+}
+#crossfade > img:nth-child(4) {
+    background-image: url(/images/main/4.jpg);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    animation-delay: 18s;
+    -ms-animation-delay: 18s;
+}
+#crossfade > img:nth-child(5) {
+    background-image: url(/images/main/5.jpg);
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    animation-delay: 24s;
+    -ms-animation-delay: 24s;
+}
+
+@-webkit-keyframes imageAnimation {
+    0% { opacity: 0;
+        -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+        -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-moz-keyframes imageAnimation {
+    0% { opacity: 0;
+        -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+        -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-o-keyframes imageAnimation {
+    0% { opacity: 0;
+        -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+        -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@-ms-keyframes imageAnimation {
+    0% { opacity: 0;
+        -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+        -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes imageAnimation {
+    0% { opacity: 0;
+        animation-timing-function: ease-in; }
+    8% { opacity: 1;
+        animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+/*CUSTOM*/
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { display: block; }
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url(images/img-noise-361x370.png);
+    background-repeat: repeat;
+}
+
+#head {
+    width: 650px;
+    height: 120px;
+    margin: 0 auto 10px auto;
+}
+
+#logo {
+    width: 650px;
+    height: auto;
+    display: block;
+    margin: 30px auto 0 auto;
+}
+
+#flags {
+    position: relative;
+    top: 1;
+    left: 1;
+}
+
+#flags img {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 30px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #3c3c3c;
+    border-radius: 3px;
+    opacity: 0.5;
+}
+
+#flags img:hover {
+    opacity: 1;
+}
+
+#top {
+    width: 650px;
+    height: 120px;
+    margin: 0 auto 0 auto;
+    /*background-color: #e7e7e7;*/
+}
+
+#icons {
+    position: relative;
+    top: 10px;
+    margin: 0 auto 0 auto;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#icons i {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #adadad;
+    /*vertical-align: middle;*/
+}
+
+#icons i:hover {
+    color: #888;
+}
+
+#menu-bar {
+    position: relative;
+    top: -20px;
+    float: right;
+    left: -50%;
+}
+
+#menu-bar ul {
+    list-style: none;
+    position: relative;
+    left: 50%;
+    margin-top: 10px;
+}
+
+#menu-bar li {
+    float: left;
+    position: relative;
+    margin-right: 55px;
+}
+
+#menu-bar a {
+    color: #8c8c8c;
+    font-size: 13pt;
+    font-family: "Segoe UI", "Arial", "Courier New";
+    text-decoration: none;
+}
+
+#selected {
+    color: #000000;
+}
+
+#selected > a {
+    color: #000000;
+}
+
+#menu-bar a:hover {
+    color: #222222;
+    text-decoration: none;
+}
+
+#images {
+    width: 533px;
+    height: 800px;
+    margin: 0 auto 30px auto;
+    position: relative;
+    /*background-color: #afd9ee;*/
+}
+
+/*MAIN*/
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/*PORTFOLIO*/
+
+#albums-bar-shape {
+    width: 1141px;
+    height: 25px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin: 0 auto 0px auto;
+}
+
+.albums-bar {
+    position: relative;
+    float: right;
+    left: -50%;
+    top: -15px;
+}
+
+.albums-bar ul {
+    list-style: none;
+    position: relative;
+    left: 50%;
+}
+
+.albums-bar li {
+    float: left;
+    margin-right: 50px;
+    list-style-type: none;
+}
+
+.albums-bar a {
+    color: #8c8c8c;
+    font-size: 13pt;
+    font-family: "Segoe UI", "Arial", "Courier New";
+    text-decoration: none;
+}
+
+.albums-bar a:hover {
+    color: #222222;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #222222;
+    text-decoration: none;
+}
+
+#album {
+    width: 1150px;
+    height: 850px;
+    margin: 30px auto 30px auto;
+    position: relative;
+    /*background-color: #afd9ee;*/
+}
+
+#selected-album {
+    color: #222222;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #222222;
+}
+/*Vertical photos formatting*/
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 275px;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+/*Horizontal photos formatting*/
+div.img-wide {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 370px;
+}
+
+div.img-wide:hover {
+    border: 1px solid #777;
+}
+
+div.img-wide img {
+    width: 100%;
+    height: auto;
+}
+
+div.img-wider {
+    margin: 25px 5px 10px 40px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 550px;
+}
+
+div.img-wider:hover {
+    border: 1px solid #777;
+}
+
+div.img-wider img {
+    width: 100%;
+    height: auto;
+}
+
+/*Cropped images formatting*/
+div.img-crop {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 275px;
+    height: 275px;
+    position: relative;
+    overflow: hidden;
+}
+
+div.img-crop img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+div.img-crop img.portrait {
+    width: 100%;
+    height: auto;
+}
+
+div.img-crop img.portrait-top {
+    top: 75%;
+    width: 100%;
+    height: auto;
+}
